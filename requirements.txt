@@ -1,0 +1,5 @@
+requests
+flask
+psycopg2
+pywebpush
+flask-cors

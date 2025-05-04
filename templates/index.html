@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye Deprem Takip Sistemi - Canlı Deprem Verileri ve Haritası</title>
+    
+    <meta name="description" content="Türkiye'deki son depremleri canlı olarak takip edin. Gerçek zamanlı deprem haritası, istatistikler, grafikler ve anlık bildirimlerle deprem takip sistemi. AFAD ve Kandilli verileri.">
+    <meta name="keywords" content="deprem, türkiye deprem, canlı deprem, deprem haritası, son depremler, afad, kandilli, deprem takip, deprem bildirimi, earthquake turkey">
+    <meta name="author" content="Türkiye Deprem Takip Sistemi">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Turkish">
+    <meta name="revisit-after" content="1 days">
+    
+    <meta property="og:title" content="Türkiye Deprem Takip Sistemi">
+    <meta property="og:description" content="Türkiye'deki son depremleri canlı olarak takip edin. Gerçek zamanlı deprem haritası, istatistikler ve bildirimler.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:url" content="https://wordia.info">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Türkiye Deprem Takip Sistemi">
+    <meta name="twitter:description" content="Türkiye'deki son depremleri canlı olarak takip edin. Gerçek zamanlı deprem haritası ve bildirimler.">
+    <meta name="twitter:image" content="/images/twitter-card.jpg">
+    
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Deprem Takip">
+    <meta name="application-name" content="Deprem Takip">
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <link rel="canonical" href="https://wordia.info" />
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Türkiye Deprem Takip Sistemi",
+        "description": "Türkiye'deki son depremleri canlı olarak takip edin. Gerçek zamanlı deprem haritası, istatistikler ve bildirimler.",
+        "url": "https://wordia.info",
+        "applicationCategory": "Utility",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "TRY"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Türkiye Deprem Takip Sistemi"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Türkiye Deprem Takip Sistemi",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wordia.info/logo.png"
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+        }
+    }
+    </script>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary-color: #06b6d4;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --success-color: #10b981;
+            --text-color: #1f2937;
+            --text-light: #6b7280;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --gradient-from: #6366f1;
+            --gradient-via: #8b5cf6;
+            --gradient-to: #d946ef;
+        }
+        
+        .dark-mode {
+            --text-color: #f9fafb;
+            --text-light: #d1d5db;
+            --bg-color: #111827;
+            --card-bg: #1f2937;
+            --border-color: #374151;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+        
+        .header {
+            background: var(--card-bg);
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--gradient-from), var(--gradient-via), var(--gradient-to));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.1rem;
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            font-size: 0.75rem;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            white-space: nowrap;
+        }
+        
+        button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        button i {
+            font-size: 1rem;
+        }
+        
+        .main-content {
+            display: flex;
+            gap: 0.5rem;
+            height: calc(100vh - 110px);
+            min-height: 600px;
+        }
+        
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            background: var(--card-bg);
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 0.75rem 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            position: relative;
+            color: var(--text-light);
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            color: var(--primary-color);
+        }
+        
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .tab-content {
+            flex: 1;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            padding: 0.5rem;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .filter-button {
+            flex: 1;
+            padding: 0.5rem;
+            background: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        
+        .filter-button.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        #map {
+            flex: 1;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+        
+        .earthquake-list, .fault-line-list {
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .earthquake-list::-webkit-scrollbar, .fault-line-list::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .earthquake-list::-webkit-scrollbar-track, .fault-line-list::-webkit-scrollbar-track {
+            background: var(--border-color);
+            border-radius: 2px;
+        }
+        
+        .earthquake-list::-webkit-scrollbar-thumb, .fault-line-list::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .earthquake {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.2s;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .earthquake:hover {
+            background: rgba(79, 70, 229, 0.05);
+            transform: translateX(4px);
+        }
+        
+        .magnitude {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .magnitude::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 40%,
+                rgba(255, 255, 255, 0.3) 50%,
+                transparent 60%
+            );
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .magnitude.low {
+            background: linear-gradient(135deg, #eab308, #ca8a04);
+        }
+        
+        .magnitude.medium {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
+        
+        .magnitude.high {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+        
+        .earthquake-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .location {
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .earthquake-meta {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        
+        .fault-line {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .fault-line:hover {
+            background: rgba(79, 70, 229, 0.05);
+            transform: translateX(4px);
+        }
+        
+        .fault-line-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .fault-line-risk {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.7rem;
+            border-radius: 1rem;
+            color: white;
+            margin-top: 0.25rem;
+        }
+        
+        .fault-line-risk.high {
+            background-color: #FF0000;
+        }
+        
+        .fault-line-risk.medium-high {
+            background-color: #FF6600;
+        }
+        
+        .fault-line-risk.medium {
+            background-color: #FFAA00;
+        }
+        
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            display: none;
+        }
+        
+        .last-update {
+            text-align: center;
+            margin-top: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.75rem;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .dark-mode .earthquake {
+            color: var(--text-color);
+        }
+        
+        .dark-mode .fault-line {
+            color: var(--text-color);
+        }
+        
+        .dark-mode .earthquake-meta {
+            color: var(--text-light);
+        }
+        
+        .dark-mode .filter-button {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        
+        .dark-mode .filter-button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .dark-mode .leaflet-popup-content-wrapper {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        
+        .dark-mode .leaflet-popup-tip {
+            background-color: var(--card-bg);
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: 350px;
+            }
+            
+            #map {
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+                padding: 0.75rem;
+            }
+            
+            .controls {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            h1 {
+                font-size: 1.25rem;
+            }
+            
+            .subtitle {
+                font-size: 0.7rem;
+            }
+        }
+        
+        .leaflet-control-layers {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+        }
+        
+        .dark-mode .leaflet-control-layers {
+            background: var(--card-bg);
+            color: var(--text-color);
+        }
+        
+        .info.legend {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background: var(--card-bg);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        
+        .info.legend h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .dark-mode .leaflet-popup-content-wrapper {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        
+        .dark-mode .leaflet-popup-tip {
+            background-color: var(--card-bg);
+        }
+        
+        .dark-mode .leaflet-container {
+            background: #f7f7f7;
+        }
+        .dark-mode .leaflet-bar a {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border-color: var(--border-color);
+        }
+        
+        .dark-mode .leaflet-bar a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .dark-mode .leaflet-control-layers-toggle {
+            background-color: var(--card-bg);
+        }
+        
+        .dark-mode .leaflet-control-layers-expanded {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>Türkiye Deprem Takip Sistemi</h1>
+                <p class="subtitle">Canlı deprem verileri ve istatistikler</p>
+            </div>
+            <div class="controls">
+                <button id="notificationBtn" onclick="toggleNotifications()">
+                    <i class="fas fa-bell"></i> Bildirimler
+                </button>
+                <button onclick="toggleDarkMode()">
+                    <i class="fas fa-moon"></i> Karanlık Mod
+                </button>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="tabs">
+                    <div class="tab active" data-tab="earthquakes">Son 150</div>
+                    <div class="tab" data-tab="faultlines">Fay Hatları</div>
+                </div>
+                <div class="tab-content active" id="earthquakes-tab">
+                    <div class="filter-buttons">
+                        <div class="filter-button active" data-sort="time">En Yeni</div>
+                        <div class="filter-button" data-sort="magnitude">En Büyük</div>
+                    </div>
+                    <div class="earthquake-list" id="earthquakeList"></div>
+                </div>
+                <div class="tab-content" id="faultlines-tab">
+                    <div class="fault-line-list" id="faultLineList"></div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+        
+        <div class="last-update">
+            <p>Son Güncelleme: <span id="updateTime">--:--:--</span></p>
+        </div>
+    </div>
+
+    <audio id="alertSound" src="/static/alert.mp3"></audio>
+
+    <script>
+        const VAPID_PUBLIC_KEY = '{{ vapid_public_key }}';
+        let map;
+        let markers = [];
+        let lastMagnitude = 0;
+        let faultLinesLayer;
+        let faultLinesData = null;
+        let earthquakeData = [];
+        let currentSortType = 'time';
+        
+        async function initServiceWorker() {
+            if ('serviceWorker' in navigator) {
+                try {
+                    const registration = await navigator.serviceWorker.register('/sw.js');
+                    console.log('Service Worker registered');
+                    return registration;
+                } catch (error) {
+                    console.error('Service Worker registration failed:', error);
+                }
+            }
+        }
+        
+        function initMap() {
+            map = L.map('map').setView([39.0, 35.0], 6);
+            
+            let tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            });
+            
+            tileLayer.addTo(map);
+            loadFaultLines();
+        }
+        
+        async function loadFaultLines() {
+            try {
+                const response = await fetch('/static/fay.json');
+                faultLinesData = await response.json();
+                
+                faultLinesLayer = L.layerGroup();
+                
+                const faultLineList = document.getElementById('faultLineList');
+                faultLineList.innerHTML = '';
+                
+                faultLinesData.features.forEach((feature, index) => {
+                    const style = {
+                        color: feature.properties.risk === 'Yüksek' ? '#FF0000' : 
+                               feature.properties.risk === 'Orta-Yüksek' ? '#FF6600' : '#FFAA00',
+                        weight: 3,
+                        opacity: 0.8,
+                        dashArray: feature.properties.risk === 'Yüksek' ? null : '5, 5'
+                    };
+                    
+                    const faultLine = L.geoJSON(feature, {
+                        style: style,
+                        onEachFeature: function(feature, layer) {
+                            layer.bindPopup(`
+                                <div style="padding: 10px;">
+                                    <h3 style="margin: 0 0 10px 0; color: var(--primary-color);">
+                                        ${feature.properties.name}
+                                    </h3>
+                                    <p><strong>Risk Seviyesi:</strong> ${feature.properties.risk}</p>
+                                    <p><strong>Uzunluk:</strong> ${feature.properties.length}</p>
+                                </div>
+                            `);
+                            
+                            layer.on('mouseover', function() {
+                                this.setStyle({
+                                    weight: 5,
+                                    opacity: 1
+                                });
+                            });
+                            
+                            layer.on('mouseout', function() {
+                                this.setStyle(style);
+                            });
+                        }
+                    });
+                    
+                    faultLinesLayer.addLayer(faultLine);
+                    
+                    const riskClass = feature.properties.risk === 'Yüksek' ? 'high' : 
+                                    feature.properties.risk === 'Orta-Yüksek' ? 'medium-high' : 'medium';
+                    
+                    const faultLineItem = document.createElement('div');
+                    faultLineItem.className = 'fault-line';
+                    faultLineItem.innerHTML = `
+                        <div class="fault-line-name">${feature.properties.name}</div>
+                        <div class="fault-line-info">
+                            <span class="fault-line-risk ${riskClass}">${feature.properties.risk}</span>
+                            <div>${feature.properties.length}</div>
+                        </div>
+                    `;
+                    
+                    faultLineItem.addEventListener('click', () => {
+                        const bounds = faultLine.getBounds();
+                        map.fitBounds(bounds, { padding: [50, 50] });
+                        faultLine.openPopup();
+                    });
+                    
+                    faultLineList.appendChild(faultLineItem);
+                });
+                
+                faultLinesLayer.addTo(map);
+                
+                const overlays = {
+                    "Fay Hatları": faultLinesLayer
+                };
+                
+                L.control.layers(null, overlays, {
+                    position: 'topright',
+                    collapsed: false
+                }).addTo(map);
+                
+                addFaultLineLegend();
+            } catch (error) {
+                console.error('Fay hatları yüklenemedi:', error);
+            }
+        }
+        
+        function addFaultLineLegend() {
+            const legend = L.control({position: 'bottomright'});
+            
+            legend.onAdd = function(map) {
+                const div = L.DomUtil.create('div', 'info legend');
+                
+                div.innerHTML = `
+                    <h4>Fay Hatları</h4>
+                    <div style="margin-bottom: 5px;">
+                        <span style="display: inline-block; width: 20px; height: 3px; background-color: #FF0000; margin-right: 5px;"></span>
+                        Yüksek Risk
+                    </div>
+                    <div style="margin-bottom: 5px;">
+                        <span style="display: inline-block; width: 20px; height: 3px; background-color: #FF6600; margin-right: 5px;"></span>
+                        Orta-Yüksek Risk
+                    </div>
+                    <div>
+                        <span style="display: inline-block; width: 20px; height: 3px; background-color: #FFAA00; margin-right: 5px;"></span>
+                        Orta Risk
+                    </div>
+                `;
+                
+                return div;
+            };
+            
+            legend.addTo(map);
+        }
+        
+        function getMagnitudeClass(magnitude) {
+            if (magnitude >= 5.0) return 'high';
+            if (magnitude >= 3.0) return 'medium';
+            return 'low';
+        }
+        
+        function updateMap(earthquakes) {
+            markers.forEach(marker => map.removeLayer(marker));
+            markers = [];
+            
+            earthquakes.forEach(eq => {
+                const color = eq.magnitude >= 5.0 ? '#ef4444' : eq.magnitude >= 3.0 ? '#f97316' : '#eab308';
+                const marker = L.circleMarker([eq.lat, eq.lon], {
+                    radius: eq.magnitude * 2.5,
+                    fillColor: color,
+                    color: '#fff',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                }).addTo(map);
+                
+                marker.bindPopup(`
+                    <div style="padding: 8px;">
+                        <strong style="font-size: 1.2em;">M ${eq.magnitude}</strong><br>
+                        <strong>${eq.nearest_city}</strong> (${eq.distance_km} km)<br>
+                        <i class="far fa-clock"></i> ${eq.time}<br>
+                        <i class="fas fa-arrow-down"></i> Derinlik: ${eq.depth} km
+                    </div>
+                `);
+                
+                markers.push(marker);
+            });
+        }
+        
+        function parseTimestamp(timeStr) {
+            try {
+                return new Date(timeStr).getTime();
+            } catch (e) {
+                return 0;
+            }
+        }
+        
+        function sortEarthquakes(data, sortType) {
+            if (sortType === 'time') {
+                return [...data].sort((a, b) => {
+                    return parseTimestamp(b.time) - parseTimestamp(a.time);
+                });
+            } else if (sortType === 'magnitude') {
+                return [...data].sort((a, b) => {
+                    return b.magnitude - a.magnitude;
+                });
+            }
+            return data;
+        }
+        
+        function updateEarthquakeList(earthquakes) {
+            earthquakeData = earthquakes;
+            
+            const sortedData = sortEarthquakes(earthquakes, currentSortType);
+            
+            const list = document.getElementById('earthquakeList');
+            list.innerHTML = '';
+            
+            sortedData.forEach(eq => {
+                const earthquakeItem = document.createElement('div');
+                earthquakeItem.className = 'earthquake';
+                earthquakeItem.innerHTML = `
+                    <div class="magnitude ${getMagnitudeClass(eq.magnitude)}">
+                        ${eq.magnitude}
+                    </div>
+                    <div class="earthquake-info">
+                        <div class="location">${eq.nearest_city}</div>
+                        <div class="earthquake-meta">
+                            <i class="fas fa-location-dot"></i> ${eq.distance_km} km &nbsp;
+                            <i class="far fa-clock"></i> ${eq.time} &nbsp;
+                            <i class="fas fa-arrow-down"></i> ${eq.depth} km
+                        </div>
+                    </div>
+                `;
+                
+                earthquakeItem.addEventListener('click', () => {
+                    const marker = markers.find(m => 
+                        m.getLatLng().lat === eq.lat && 
+                        m.getLatLng().lng === eq.lon
+                    );
+                    
+                    if (marker) {
+                        map.setView([eq.lat, eq.lon], 10);
+                        marker.openPopup();
+                    }
+                });
+                
+                list.appendChild(earthquakeItem);
+            });
+        }
+        
+        let isFirstLoad = true;
+        
+        function updateEarthquakes() {
+            let url = '/api/earthquakes?limit=150';
+            
+            if (isFirstLoad) {
+                document.getElementById('loading').style.display = 'flex';
+            }
+            
+            fetch(url)
+                .then(response => response.json())
+                .then(earthquakes => {
+                    updateMap(earthquakes);
+                    updateEarthquakeList(earthquakes);
+                    
+                    const now = new Date();
+                    const timeString = now.toLocaleTimeString('tr-TR');
+                    document.getElementById('updateTime').textContent = timeString;
+                    
+                    if (earthquakes.length > 0 && earthquakes[0].magnitude > lastMagnitude) {
+                        if (earthquakes[0].magnitude >= 4.0) {
+                            playAlert();
+                        }
+                        lastMagnitude = earthquakes[0].magnitude;
+                    }
+                    
+                    if (isFirstLoad) {
+                        document.getElementById('loading').style.display = 'none';
+                        isFirstLoad = false;
+                    }
+                });
+        }
+        
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            
+            const icon = document.querySelector('button[onclick="toggleDarkMode()"] i');
+            icon.className = document.body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+            
+        }
+        
+        function playAlert() {
+            const audio = document.getElementById('alertSound');
+            audio.play().catch(error => console.log('Audio play failed:', error));
+        }
+        
+        async function toggleNotifications() {
+            if (!('Notification' in window) || !('serviceWorker' in navigator)) {
+                alert('Tarayıcınız bildirimleri desteklemiyor');
+                return;
+            }
+            
+            try {
+                if (Notification.permission === 'default') {
+                    const permission = await Notification.requestPermission();
+                    if (permission === 'granted') {
+                        await subscribeToPush();
+                    }
+                } else if (Notification.permission === 'granted') {
+                    await subscribeToPush();
+                } else {
+                    alert('Bildirim izni reddedildi. Lütfen tarayıcı ayarlarından bildirimlere izin verin.');
+                }
+            } catch (error) {
+                console.error('Notification error:', error);
+                alert('Bildirim sistemi hatası: ' + error.message);
+            }
+        }
+        
+        async function subscribeToPush() {
+            try {
+                const registration = await navigator.serviceWorker.ready;
+                
+                const existingSubscription = await registration.pushManager.getSubscription();
+                if (existingSubscription) {
+                    await existingSubscription.unsubscribe();
+                }
+                
+                const subscription = await registration.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+                });
+                
+                const response = await fetch('/api/push/subscribe', {
+                    method: 'POST',
+                    body: JSON.stringify(subscription),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    alert('Bildirimler başarıyla etkinleştirildi!');
+                }
+            } catch (error) {
+                console.error('Push subscription error:', error);
+                alert('Bildirim aboneliği hatası: ' + error.message);
+            }
+        }
+        
+        function urlBase64ToUint8Array(base64String) {
+            const padding = '='.repeat((4 - base64String.length % 4) % 4);
+            const base64 = (base64String + padding)
+                .replace(/\-/g, '+')
+                .replace(/_/g, '/');
+            
+            const rawData = window.atob(base64);
+            const outputArray = new Uint8Array(rawData.length);
+            
+            for (let i = 0; i < rawData.length; ++i) {
+                outputArray[i] = rawData.charCodeAt(i);
+            }
+            return outputArray;
+        }
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            await initServiceWorker();
+            
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    const tabName = tab.dataset.tab;
+                    document.getElementById(`${tabName}-tab`).classList.add('active');
+                });
+            });
+            
+            const filterButtons = document.querySelectorAll('.filter-button');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    currentSortType = button.dataset.sort;
+                    updateEarthquakeList(earthquakeData);
+                });
+            });
+            
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                const icon = document.querySelector('button[onclick="toggleDarkMode()"] i');
+                if (icon) icon.className = 'fas fa-sun';
+            }
+            
+            initMap();
+            updateEarthquakes();
+            
+            setInterval(updateEarthquakes, 2000);
+        });
+    </script>
+</body>
+</html>

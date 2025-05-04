@@ -1,0 +1,23 @@
+{
+    "name": "Türkiye Deprem Takip Sistemi",
+    "short_name": "DepremTakip",
+    "description": "Türkiye'deki depremleri anlık olarak takip edin.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3498db",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/static/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/badge.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any badge"
+        }
+    ]
+}

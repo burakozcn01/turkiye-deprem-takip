@@ -1,0 +1,925 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Kuzey Anadolu Fay Hattı (KAF)", "risk": "Yüksek", "length": "1500 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [26.1, 40.7], [27.5, 40.9], [29.1, 41.0], [30.5, 40.8],
+          [31.8, 40.7], [33.2, 40.6], [34.5, 40.5], [36.0, 40.4],
+          [37.5, 40.3], [39.0, 40.0], [40.5, 39.9], [42.0, 39.8],
+          [43.5, 39.7], [44.9, 39.6]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Doğu Anadolu Fay Hattı (DAF)", "risk": "Yüksek", "length": "580 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [42.1, 39.1], [41.5, 38.8], [40.8, 38.5], [40.1, 38.2],
+          [39.5, 37.9], [38.8, 37.6], [38.1, 37.3], [37.4, 37.0],
+          [36.7, 36.7], [36.0, 36.4]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ege Graben Sistemi", "risk": "Orta-Yüksek", "length": "Çoklu segmentler" },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [[27.0, 38.4], [27.5, 38.2], [28.0, 38.0], [28.5, 37.8]],
+          [[27.2, 38.0], [27.7, 37.8], [28.2, 37.6], [28.7, 37.4]],
+          [[27.4, 37.6], [27.9, 37.4], [28.4, 37.2], [28.9, 37.0]]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Batı Anadolu Fay Zonu", "risk": "Orta", "length": "300 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [29.0, 39.5], [29.3, 39.2], [29.6, 38.9], [29.9, 38.6],
+          [30.2, 38.3], [30.5, 38.0]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bitlis-Zagros Kenet Kuşağı", "risk": "Yüksek", "length": "450 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [41.5, 37.5], [42.2, 37.7], [42.9, 37.9], [43.6, 38.1],
+          [44.3, 38.3], [45.0, 38.5]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ölüdeniz Fay Zonu", "risk": "Orta", "length": "180 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.5, 36.8], [35.8, 36.5], [36.2, 36.3], [36.5, 36.0]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Malatya Fayı", "risk": "Orta-Yüksek", "length": "120 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [38.2, 38.4], [38.5, 38.2], [38.8, 38.0]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sürgü Fayı", "risk": "Orta", "length": "90 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.9, 38.1], [38.2, 37.9], [38.5, 37.7]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çaldıran Fayı", "risk": "Yüksek", "length": "50 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [43.5, 39.1], [43.7, 39.3]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gökova Fayı", "risk": "Orta", "length": "70 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [27.5, 37.1], [28.0, 36.9], [28.5, 36.7]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Fethiye-Burdur Fay Zonu", "risk": "Orta", "length": "250 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [29.0, 37.5], [29.3, 37.3], [29.6, 37.1], [30.0, 36.8]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Balıkesir-Gönen Fay Hattı", "risk": "Orta", "length": "100 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [27.5, 40.2], [28.0, 40.0], [28.5, 39.8]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Erzincan Fayı", "risk": "Yüksek", "length": "60 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [39.5, 39.8], [39.9, 39.7]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ganos Fayı", "risk": "Yüksek", "length": "120 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [26.1, 41.8], [26.4, 41.7], [26.7, 41.6], [27.0, 41.5]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pazarcık Fayı", "risk": "Yüksek", "length": "200 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [37.2, 37.4], [38.0, 37.6], [38.8, 37.9], [39.5, 38.2]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Niksar-Erbaa Fayı", "risk": "Yüksek", "length": "100 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [36.9, 40.2], [37.5, 40.0], [38.0, 39.8]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karadere Fayı", "risk": "Orta", "length": "85 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [29.8, 40.7], [30.2, 40.4], [30.6, 40.1]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Orta Anadolu Fay Hattı – Kuzey", "risk": "Orta", "length": "400 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [33.5, 39.5], [35.0, 38.8], [36.5, 38.0], [38.0, 37.2]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Orta Anadolu Fay Hattı – Güney", "risk": "Orta", "length": "300 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [30.0, 37.5], [31.5, 36.8], [33.0, 36.0], [34.5, 35.5]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Eskişehir Fay Hattı", "risk": "Orta", "length": "75 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [30.6, 39.8], [31.0, 39.7], [31.4, 39.6]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Dinar Fayı", "risk": "Orta", "length": "120 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [29.6, 38.1], [30.0, 37.8], [30.4, 37.5]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yenice–Gönen Fayı", "risk": "Orta", "length": "80 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [27.3, 39.9], [27.6, 39.7], [27.9, 39.5]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Menderes Graben Sistemi", "risk": "Orta-Yüksek", "length": "Çoklu segmentler" },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [[27.7, 38.6], [27.9, 38.4], [28.1, 38.2]],
+          [[28.0, 38.8], [28.2, 38.6], [28.4, 38.4]]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tuz Gölü Fay Zonu", "risk": "Orta", "length": "150 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [32.5, 37.0], [33.0, 36.8], [33.5, 36.6], [34.0, 36.4]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karaisalı Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.1, 37.0], [35.4, 36.8], [35.7, 36.6]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çınarcık Segmenti", "risk": "Yüksek", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.2, 40.9], [28.6, 40.8], [29.0, 40.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Prens Adaları Segmenti", "risk": "Yüksek", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.9, 40.9], [29.2, 40.9], [29.5, 40.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tekirdağ Havzası Segmenti", "risk": "Yüksek", "length": "65 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.0, 40.9], [27.4, 40.9], [27.8, 40.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gemlik-Armutlu Fayı", "risk": "Yüksek", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.5, 40.6], [29.0, 40.6], [29.4, 40.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yalova-Çınarcık Fayı", "risk": "Yüksek", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.0, 40.7], [29.3, 40.6], [29.6, 40.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gülbahçe Fayı", "risk": "Orta-Yüksek", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.5, 38.5], [26.8, 38.4], [27.1, 38.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Seferihisar Fayı", "risk": "Orta-Yüksek", "length": "25 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.9, 38.3], [27.2, 38.2], [27.5, 38.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sazlı Fayı", "risk": "Orta", "length": "20 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.4, 38.9], [26.7, 38.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Balçova-İnciraltı Fayı", "risk": "Orta", "length": "18 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.0, 38.4], [27.2, 38.4], [27.4, 38.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bakırçay (Bergama-Dikili) Fayı", "risk": "Orta", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.8, 39.3], [27.1, 39.1], [27.4, 38.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Akhisar-Soma Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.7, 38.9], [28.1, 38.7], [28.4, 38.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pamukkale-Denizli Fayı", "risk": "Orta-Yüksek", "length": "65 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.0, 37.9], [29.2, 37.8], [29.5, 37.7], [29.8, 37.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Honaz Fayı", "risk": "Orta", "length": "25 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.4, 37.8], [29.7, 37.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Edremit-Kazdağı Fayı", "risk": "Orta", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.6, 39.9], [27.0, 39.8], [27.4, 39.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sığacık Körfezi (Tuzla) Fayı", "risk": "Orta-Yüksek", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.7, 38.2], [27.0, 38.1], [27.3, 38.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Finike-Kumluca Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.2, 36.4], [30.6, 36.3], [31.0, 36.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Göksu (Silifke) Fayı", "risk": "Orta", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.8, 36.5], [34.2, 36.4], [34.6, 36.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kırıkkale Fay Zonu", "risk": "Orta-Yüksek", "length": "110 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.0, 39.8], [33.8, 39.5], [34.6, 39.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sivas-Zara Fayı", "risk": "Orta-Yüksek", "length": "90 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [37.1, 39.8], [37.6, 39.6], [38.1, 39.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ecemiş Fayı", "risk": "Yüksek", "length": "140 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.0, 38.0], [35.4, 37.7], [35.8, 37.4], [36.2, 37.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karlıova Fayı", "risk": "Yüksek", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [41.0, 39.4], [41.4, 39.3], [41.8, 39.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yedisu Segmenti", "risk": "Yüksek", "length": "80 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [40.1, 39.7], [40.5, 39.6], [40.9, 39.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Palu Segmenti", "risk": "Yüksek", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [39.8, 38.7], [40.2, 38.6], [40.6, 38.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bingöl Segmenti", "risk": "Yüksek", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [40.9, 39.1], [41.2, 39.0], [41.5, 38.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Erzurum Fay Zonu", "risk": "Yüksek", "length": "120 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [40.8, 39.9], [41.3, 39.8], [41.8, 39.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hakkâri-Yüksekova Fayı", "risk": "Yüksek", "length": "100 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [43.3, 37.6], [43.7, 37.4], [44.1, 37.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Samandağ-Antakya Fayı", "risk": "Yüksek", "length": "80 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.9, 36.1], [36.2, 36.2], [36.6, 36.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Misis-Çukurova Fayı", "risk": "Orta-Yüksek", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.2, 37.0], [35.6, 36.9], [36.0, 36.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Saros Körfezi Fayı", "risk": "Yüksek", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.3, 40.6], [26.7, 40.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Marmara Denizi Orta Segmenti", "risk": "Yüksek", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.4, 40.8], [28.9, 40.8], [29.4, 40.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "İzmit-Gölcük Fayı", "risk": "Yüksek", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.6, 40.8], [30.0, 40.7], [30.4, 40.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mudurnu–Göynük Fayı", "risk": "Orta-Yüksek", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.2, 40.5], [30.6, 40.3], [31.0, 40.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Simav-Gediz Fayı", "risk": "Orta-Yüksek", "length": "90 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.7, 39.2], [29.2, 39.0], [29.7, 38.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Uşak-Banaz Fayı", "risk": "Orta", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.3, 38.8], [29.8, 38.6], [30.2, 38.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Alaşehir (Gediz Graben) Fayı", "risk": "Orta-Yüksek", "length": "100 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.4, 38.5], [28.9, 38.4], [29.4, 38.2], [29.9, 38.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Burdur Gölü Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.0, 37.4], [30.4, 37.3], [30.8, 37.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Isparta Kesen Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [31.0, 37.8], [31.4, 37.6], [31.8, 37.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bartın-Kastamonu Karadeniz Açığı Fayı", "risk": "Orta", "length": "120 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [32.6, 42.0], [33.3, 41.9], [34.0, 41.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Zonguldak Açığı Fayı", "risk": "Orta", "length": "80 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [31.9, 41.7], [32.4, 41.6], [32.9, 41.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Düzce Fay Segmenti", "risk": "Yüksek", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.7, 40.9], [31.2, 40.8], [31.6, 40.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gemlik Çevre Fayı", "risk": "Yüksek", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.8, 40.4], [29.1, 40.4], [29.3, 40.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "İzmir-Bayraklı Fayı", "risk": "Orta-Yüksek", "length": "20 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.1, 38.5], [27.3, 38.5], [27.5, 38.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Erdek-Gönen Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.5, 40.5], [27.8, 40.4], [28.1, 40.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sultandağı Fayı", "risk": "Orta-Yüksek", "length": "100 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.8, 38.6], [31.2, 38.4], [31.6, 38.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Akşehir Fayı", "risk": "Orta", "length": "85 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [31.1, 38.4], [31.6, 38.1], [32.0, 37.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Aras Fayı", "risk": "Orta", "length": "120 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [43.3, 40.5], [43.8, 40.3], [44.3, 40.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karasu Fayı", "risk": "Yüksek", "length": "90 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [39.4, 39.8], [39.8, 39.7], [40.2, 39.6], [40.6, 39.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Keskin–Hirfanlı Fayı", "risk": "Orta", "length": "95 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.3, 39.6], [33.8, 39.3], [34.3, 39.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Savrun Fayı", "risk": "Orta-Yüksek", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [36.0, 37.6], [36.4, 37.4], [36.8, 37.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Manyas Fayı", "risk": "Orta", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.6, 40.1], [27.9, 39.9], [28.2, 39.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tavşanlı Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.2, 39.4], [29.6, 39.2], [30.0, 39.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Eğirdir Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [31.0, 37.9], [31.4, 37.7], [31.8, 37.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Uzunlu Fayı", "risk": "Orta", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.9, 39.1], [36.3, 38.9], [36.7, 38.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çine‑Çökelek Fayı", "risk": "Orta-Yüksek", "length": "75 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.7, 37.6], [28.1, 37.4], [28.5, 37.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Enez Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.0, 40.8], [26.3, 40.7], [26.6, 40.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Biga Fayı", "risk": "Orta", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.0, 40.3], [27.4, 40.2], [27.8, 40.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lapseki Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.6, 40.4], [26.9, 40.3], [27.2, 40.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Toprakkale Fayı", "risk": "Orta-Yüksek", "length": "80 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [36.4, 37.1], [36.8, 36.9], [37.2, 36.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Malazgirt Fayı", "risk": "Orta", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [42.7, 39.2], [43.1, 39.0], [43.5, 38.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ladik Fayı", "risk": "Orta-Yüksek", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [36.0, 40.9], [36.4, 40.8], [36.8, 40.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bafra Delta Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.9, 41.7], [36.2, 41.6], [36.5, 41.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Silivri Segmenti", "risk": "Yüksek", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.3, 41.0], [28.6, 41.0], [28.9, 41.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Batı Tuz Gölü Segmenti", "risk": "Orta", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [32.0, 38.0], [32.4, 37.8], [32.8, 37.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Beyşehir Fayı", "risk": "Orta", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [31.4, 37.7], [31.8, 37.5], [32.2, 37.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gölyaka Fayı", "risk": "Orta-Yüksek", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.9, 40.8], [31.2, 40.7], [31.5, 40.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çeltikçi Fayı", "risk": "Orta", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.7, 37.3], [31.1, 37.1], [31.5, 36.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yalvaç Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [31.2, 38.3], [31.6, 38.1], [32.0, 37.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kütahya Fayı", "risk": "Orta-Yüksek", "length": "80 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.5, 39.6], [29.9, 39.4], [30.3, 39.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Amasya Fayı", "risk": "Orta", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.6, 40.9], [36.0, 40.7], [36.4, 40.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çaldıran‑Selim Fayı", "risk": "Yüksek", "length": "65 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [43.7, 39.3], [44.1, 39.1], [44.5, 38.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Balıkesir‑Manyas Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.8, 39.8], [28.1, 39.6], [28.4, 39.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kumluova Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.7, 36.4], [31.0, 36.3], [31.3, 36.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kızılırmak Fayı", "risk": "Orta", "length": "90 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [34.8, 39.6], [35.3, 39.3], [35.8, 39.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nazilli‑Bozdoğan Fayı", "risk": "Orta-Yüksek", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.2, 37.9], [28.6, 37.7], [29.0, 37.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ilıca‑Çeşme Fayı", "risk": "Orta", "length": "25 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.2, 38.3], [26.5, 38.2], [26.8, 38.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karaburun Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.4, 38.7], [26.7, 38.6], [27.0, 38.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Posof Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [42.6, 41.4], [43.0, 41.2], [43.4, 41.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Körfez‑Hereke Fayı", "risk": "Yüksek", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.7, 40.8], [30.1, 40.7], [30.5, 40.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Arifiye Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.3, 40.9], [30.6, 40.8], [30.9, 40.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yığılca Fayı", "risk": "Orta", "length": "25 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [31.2, 41.0], [31.5, 40.9], [31.8, 40.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Dikili‑Çandarlı Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.7, 39.1], [27.0, 39.0], [27.3, 38.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Göynük‑Taraklı Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.4, 40.4], [30.8, 40.2], [31.2, 40.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Cihanbeyli Fayı", "risk": "Orta", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [32.4, 38.5], [32.8, 38.3], [33.2, 38.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Şarkışla Fayı", "risk": "Orta-Yüksek", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [36.3, 39.4], [36.7, 39.2], [37.1, 39.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pütürge Fayı", "risk": "Yüksek", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [38.5, 38.3], [38.9, 38.2], [39.3, 38.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Adıyaman Fayı", "risk": "Orta", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [38.1, 37.9], [38.5, 37.7], [38.9, 37.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çorum Fayı", "risk": "Orta", "length": "80 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [34.6, 40.8], [35.1, 40.6], [35.6, 40.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Orhaneli Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.0, 39.8], [29.3, 39.7], [29.6, 39.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kırkağaç Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.5, 38.7], [27.9, 38.6], [28.3, 38.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Harran Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [38.6, 36.9], [39.0, 36.8], [39.4, 36.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Köprüköy Fayı", "risk": "Orta-Yüksek", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [41.7, 39.9], [42.0, 39.8], [42.3, 39.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Alaçam Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.4, 41.6], [35.7, 41.5], [36.0, 41.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tokat Fayı", "risk": "Orta-Yüksek", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [36.0, 40.3], [36.4, 40.1], [36.8, 39.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sivrice (Hazar Gölü) Fayı", "risk": "Yüksek", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [39.3, 38.5], [39.7, 38.4], [40.1, 38.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kütahya‑Altıntaş Fayı", "risk": "Orta", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.4, 39.1], [29.8, 38.9], [30.2, 38.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kızılcahamam Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [32.5, 40.6], [32.9, 40.4], [33.3, 40.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Polatlı Fayı", "risk": "Orta", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [32.0, 39.7], [32.4, 39.5], [32.8, 39.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Akdağmadeni Fayı", "risk": "Orta", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [35.7, 39.7], [36.1, 39.5], [36.5, 39.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bayramiç Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.6, 40.3], [26.9, 40.2], [27.2, 40.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ayvacık‑Gülpınar Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.3, 39.5], [26.6, 39.4], [26.9, 39.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yatağan Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.1, 37.6], [28.5, 37.4], [28.9, 37.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bodrum‑Karaova Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.3, 37.1], [27.6, 37.0], [27.9, 36.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tefenni Fayı", "risk": "Orta", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.5, 37.4], [29.9, 37.2], [30.3, 37.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Eğirdir Gölü Batı Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.8, 37.9], [31.1, 37.8], [31.4, 37.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Beylikdüzü Segmenti", "risk": "Yüksek", "length": "25 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.6, 40.9], [28.9, 40.9], [29.2, 40.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çorlu Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.9, 41.2], [28.2, 41.1], [28.5, 41.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Keşan Fayı", "risk": "Orta", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [26.8, 40.9], [27.1, 40.8], [27.4, 40.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Alanya Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [32.0, 36.6], [32.4, 36.5], [32.8, 36.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gümüşhane Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [39.3, 40.5], [39.7, 40.4], [40.1, 40.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kelkit Ovası Fayı", "risk": "Orta-Yüksek", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [39.0, 40.1], [39.4, 39.9], [39.8, 39.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hopa Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [41.4, 41.4], [41.7, 41.3], [42.0, 41.2] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sinop Açığı Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [34.5, 42.0], [34.9, 41.9], [35.3, 41.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çankırı Fayı", "risk": "Orta", "length": "70 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.5, 40.8], [33.9, 40.6], [34.3, 40.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pasinler Fayı", "risk": "Orta-Yüksek", "length": "55 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [41.8, 39.9], [42.2, 39.8], [42.6, 39.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ağrı Fayı", "risk": "Yüksek", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [43.0, 39.8], [43.4, 39.7], [43.8, 39.6] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Patnos Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [42.8, 39.3], [43.1, 39.2], [43.4, 39.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Van Gölü Kuzey Fayı", "risk": "Yüksek", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [42.8, 39.1], [43.2, 39.0], [43.6, 38.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Muş Ovası Fayı", "risk": "Orta-Yüksek", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [41.3, 39.0], [41.6, 38.9], [41.9, 38.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Derinkuyu Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [34.7, 38.5], [35.0, 38.4], [35.3, 38.3] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Niğde Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [34.6, 38.3], [35.0, 38.1], [35.4, 37.9] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karaman Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.1, 37.4], [33.5, 37.2], [33.9, 37.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mersin‑Taşucu Fayı", "risk": "Orta", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.9, 36.3], [34.2, 36.2], [34.5, 36.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Silivri Açığı Segmenti‑2", "risk": "Yüksek", "length": "25 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.9, 41.0], [29.2, 41.0], [29.5, 41.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gemlik Körfezi İç Segmenti", "risk": "Yüksek", "length": "20 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [28.7, 40.5], [28.9, 40.5], [29.1, 40.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bursa‑Yenişehir Fayı", "risk": "Orta-Yüksek", "length": "60 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [29.7, 40.2], [30.1, 40.0], [30.5, 39.8] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kars Fayı", "risk": "Orta", "length": "40 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [43.0, 40.7], [43.3, 40.6], [43.6, 40.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ardahan Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [42.9, 41.2], [43.2, 41.1], [43.5, 41.0] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Çubuk Fayı", "risk": "Orta", "length": "25 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.0, 40.3], [33.3, 40.2], [33.6, 40.1] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ilgaz Fayı", "risk": "Orta", "length": "45 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [33.6, 41.1], [34.0, 40.9], [34.4, 40.7] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yozgat Fayı", "risk": "Orta", "length": "50 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [34.7, 39.9], [35.1, 39.7], [35.5, 39.5] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Geyve Fayı", "risk": "Orta", "length": "30 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [30.3, 40.6], [30.6, 40.5], [30.9, 40.4] ] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lüleburgaz Fayı", "risk": "Orta", "length": "35 km" },
+      "geometry": { "type": "LineString", "coordinates": [ [27.5, 41.4], [27.8, 41.3], [28.1, 41.2] ] }
+    }
+  ]
+}
