@@ -83,10 +83,6 @@ Bu uygulama aşağıdaki resmi kaynaklardan alınan verileri kullanmaktadır:
 - Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü
 - EMSC (Avrupa-Akdeniz Sismoloji Merkezi)
 
-## Lisans
-
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
-
 ---
 
 **Not**: Bu uygulama bilgilendirme amaçlıdır ve resmi bir uyarı sistemi değildir. Acil durumlarda resmi kurumların uyarılarını takip ediniz.
